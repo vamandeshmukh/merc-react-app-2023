@@ -24,15 +24,15 @@ const Demo = () => {
             ...empData,
             isMarried: !empData.isMarried,
         });
-        console.log(empData.salary);
+        console.log(empData.isMarried);
     };
 
     const addLastName = () => {
         setEmpData({
             ...empData,
-            firstName: firstName + 'Singh',
+            firstName: empData.firstName + 'Singh',
         });
-        console.log(empData.salary);
+        console.log(empData.firstName);
     };
 
     return (
@@ -41,7 +41,14 @@ const Demo = () => {
             <p>This is demo component.</p>
             <p>{empData.firstName}</p>
             <p>{empData.salary}</p>
-            <button onClick={increaseSalary}>Click Here</button>
+            <p> {empData.isMarried ? 'Married' : 'Single'} </p>
+            <button onClick={increaseSalary}>Add salary</button>
+            <br />
+            <br />
+            <button onClick={changeStatus}>Change status</button>
+            <br />
+            <br />
+            <button onClick={addLastName}>addLastName</button>
         </div>
     );
 };
