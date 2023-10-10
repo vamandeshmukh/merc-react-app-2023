@@ -11,10 +11,10 @@ root.render(
 
 // ReactJS 
 // fundamentals 
-// Components 
-// JSX 
-// props 
-// state 
+// 1. Components 
+// 2. JSX 
+// 3. props 
+// 4. state 
 //
 // data binding 
 // routing 
@@ -29,6 +29,9 @@ root.render(
 // Components - building blocks of a React app, return a template using JSX 
 // JSX - JavaScript Extension, looks similar to HTML, speciality of React 
 
+// state - one object for each component 
+// stores all the data of that component 
+// updates JSX if the state updates 
 
 
 
