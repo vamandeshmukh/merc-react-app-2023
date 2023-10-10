@@ -10,6 +10,7 @@ const Demo = () => {
     });
 
     // useEffect();
+    // useEffect(() => {}, []);
 
     const increaseSalary = () => {
         setEmpData({
