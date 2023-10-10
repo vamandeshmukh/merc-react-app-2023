@@ -7,12 +7,27 @@ const App = () => {
       <h1>Merc React App</h1>
       <p>Mercedes Benz ReactJS Application</p>
       <Demo />
-      <Demo></Demo>
     </div>
   );
 }
 
 export default App;
+
+// import Demo from "./components/Demo";
+
+// const App = () => {
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//       <Demo />
+//       <Demo></Demo>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 // const App = () => {
