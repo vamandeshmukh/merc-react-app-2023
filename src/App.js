@@ -1,8 +1,20 @@
+
 const App = () => {
+
+  const firstName = 'Monu';
+  const empData = {
+    firstName: 'Sonu',
+    salary: 90000,
+    phones: [9876543210, 6789012345]
+  };
 
   return (
     <div>
       <h1>Merc React App</h1>
+      <p> {firstName} </p>
+      <p> {empData.firstName} </p>
+      <p> {empData.salary} </p>
+      <p> {empData.phones[0]} </p>
       <p>Mercedes Benz ReactJS Application</p>
     </div>
   );
