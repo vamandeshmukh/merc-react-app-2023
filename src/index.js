@@ -30,7 +30,7 @@ root.render(
 // JSX - JavaScript Extension, looks similar to HTML, speciality of React 
 
 // state - one object for each component 
-// stores all the data of that component 
+// stores / updates all the data of that component 
 // updates JSX if the state updates 
 
 

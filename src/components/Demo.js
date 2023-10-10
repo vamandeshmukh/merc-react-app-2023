@@ -7,7 +7,14 @@ const Demo = () => {
     // create state object in this way 
     const [salary, setSalary] = useState(100); // number 
 
+    const [lastName, updateLastName] = useState(''); // string 
+    const [isMarried, setIsMarried] = useState(false); // boolean 
+    const [address, setAddress] = useState({}); // object 
+    const [phones, setPhones] = useState([]); // array 
+    const [empData, setEmpData] = useState({});
+
     const increaseSalary = () => {
+        setSalary(salary + 1);
         console.log(salary);
     };
 
@@ -17,6 +24,7 @@ const Demo = () => {
             <p>This is demo component.</p>
             <p>{firstName}</p>
             <p>{salary}</p>
+            <p> {isMarried} </p>
             <div>
                 <button onClick={increaseSalary}>Click Here</button>
             </div>
