@@ -9,6 +9,28 @@ root.render(
 );
 
 
+// ReactJS 
+// fundamentals 
+// Components 
+// JSX 
+// props 
+// state 
+//
+// data binding 
+// routing 
+// services 
+// http requests 
+// 
+// redux 
+
+// ReactJS 
+// fundamentals 
+//
+// Components - building blocks of a React app, return a template using JSX 
+// JSX - JavaScript Extension, looks similar to HTML, speciality of React 
+
+
+
 
 
 // import React from 'react';

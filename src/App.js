@@ -1,5 +1,5 @@
+const App = () => {
 
-function App() {
   return (
     <div>
       <h1>Merc React App</h1>
@@ -9,6 +9,46 @@ function App() {
 }
 
 export default App;
+
+
+// const App = () => {
+
+// return <p>Some text</p>
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// function App() {
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 // import logo from './logo.svg';
