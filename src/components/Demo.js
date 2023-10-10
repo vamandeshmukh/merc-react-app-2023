@@ -19,6 +19,22 @@ const Demo = () => {
         console.log(empData.salary);
     };
 
+    const changeStatus = () => {
+        setEmpData({
+            ...empData,
+            isMarried: !empData.isMarried,
+        });
+        console.log(empData.salary);
+    };
+
+    const addLastName = () => {
+        setEmpData({
+            ...empData,
+            firstName: firstName + 'Singh',
+        });
+        console.log(empData.salary);
+    };
+
     return (
         <div>
             <h1>Demo component</h1>
