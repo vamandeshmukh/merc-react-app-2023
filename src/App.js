@@ -1,26 +1,74 @@
+import Demo from "./components/Demo";
 
 const App = () => {
-
-  const firstName = 'Monu';
-  const empData = {
-    firstName: 'Sonu',
-    salary: 90000,
-    phones: [9876543210, 6789012345]
-  };
 
   return (
     <div>
       <h1>Merc React App</h1>
-      <p> {firstName} </p>
-      <p> {empData.firstName} </p>
-      <p> {empData.salary} </p>
-      <p> {empData.phones[0]} </p>
       <p>Mercedes Benz ReactJS Application</p>
+      <Demo />
+      <Demo></Demo>
     </div>
   );
 }
 
 export default App;
+
+
+// const App = () => {
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// class component 
+
+// import { Component } from "react";
+
+// class App extends Component {
+
+//   render = () => {
+//     return (
+//       <div>
+//         <h1>Merc React App</h1>
+//         <p>Mercedes Benz ReactJS Application</p>
+//       </div>
+//     );
+//   };
+// }
+
+// export default App;
+
+// function component 
+
+// const App = () => {
+
+//   const firstName = 'Monu';
+//   const empData = {
+//     firstName: 'Sonu',
+//     salary: 90000,
+//     phones: [9876543210, 6789012345]
+//   };
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p> {firstName} </p>
+//       <p> {empData.firstName} </p>
+//       <p> {empData.salary} </p>
+//       <p> {empData.phones[0]} </p>
+//       <p>Mercedes Benz ReactJS Application</p>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 // const App = () => {
