@@ -6,6 +6,7 @@ import Parent from "./components/Parent";
 import Toolbar from "./components/Toolbar";
 import Footer from './components/Footer';
 import EmpComp from "./components/EmpComp";
+import EmpList from "./components/EmpList";
 const AppRoutes = () => {
 
     return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
                     <Route path="home" element={<Home />} />
                     <Route path="demo" element={<Demo />} />
                     <Route path="emp" element={<EmpComp />} />
+                    <Route path="emplist" element={<EmpList />} />
                     <Route path="parent" element={<Parent />} />
                     <Route exact path="" element={<Home />} />
                     <Route path="*" element={<Page404 />} />

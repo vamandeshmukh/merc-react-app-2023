@@ -11,21 +11,18 @@ const EmpList = () => {
         axios.get(apiUrl)
             .then((resp) => {
                 console.log(resp);
-                setAllEmpList(resp);
+                setAllEmpList(resp.data); // imp 
             })
             .catch((err) => { console.log(err); })
-
     }, []);
 
     return (
         <div>
-            <h1>List of all Employees</h1>
+            <h1>List of All Employees</h1>
             {
-                allEmpList &&
+                (allEmpList.length > 0) &&
                 <div>
                     <p>{allEmpList[0].name}</p>
-                    <p>{allEmpList[1].name}</p>
-                    <p>{allEmpList[2].name}</p>
                     <p>Render all emps using loop</p>
                 </div>
             }

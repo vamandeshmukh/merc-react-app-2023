@@ -75,7 +75,6 @@ const EmpComp = () => {
                 <div>
                 </div>
             </div>
-            <EmpList />
         </div>
     );
 };
