@@ -1,22 +1,34 @@
-import DemoForm from "./components/DemoForm";
-import Demo from "./components/Demo";
-
-import Parent from './components/Parent';
+import AppRoutes from "./AppRoutes";
 
 const App = () => {
 
   return (
     <div>
-      <h1>Merc React App</h1>
-      <p>Mercedes Benz ReactJS Application</p>
-      <Demo />
-      <DemoForm />
-      <Parent />
+      <AppRoutes />
     </div>
   );
 }
 
 export default App;
+// import DemoForm from "./components/DemoForm";
+// import Demo from "./components/Demo";
+
+// import Parent from './components/Parent';
+
+// const App = () => {
+
+//   return (
+//     <div>
+//       <h1>Merc React App</h1>
+//       <p>Mercedes Benz ReactJS Application</p>
+//       <Demo />
+//       <DemoForm />
+//       <Parent />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // import Demo from "./components/Demo";
 
