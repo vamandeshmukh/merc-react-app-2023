@@ -1,4 +1,8 @@
-const Child = () => {
+
+const Child = (props) => {
+
+    console.log(props);
+    console.log(props.children);
 
     return (
         <div>
