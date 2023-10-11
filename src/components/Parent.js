@@ -6,6 +6,11 @@ const Parent = () => {
     const parentData = 'Sonu';
     const [childDataInParent, setChildDataInParent] = useState('');
 
+    const receiveDataFromChild = (arg) => {
+        console.log(arg);
+        setChildDataInParent(arg);
+    };
+
     return (
         <div>
             <h1>Parent Component</h1>
@@ -13,10 +18,11 @@ const Parent = () => {
             <p>Child data in parent: {childDataInParent}</p>
             {/* <Child /> */}
             {/* <Child>{parentData}</Child> */}
-            <Child passDataToChild={parentData} />
+            {/* <Child passDataToChild={parentData} /> */}
+            {/* <Child passDataToParent={receiveDataFromChild} /> */}
+            <Child passDataToChild={parentData} passDataToParent={receiveDataFromChild} />
         </div>
     );
-
 };
 
 export default Parent;
