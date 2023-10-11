@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Toolbar = () => {
 
     return (
         <div>
-            <h1>Toolbar Component</h1>
+            <Link to="home">Home</Link>
+            <Link to="Demo">Demo</Link>
+            <Link to="parent">Parent</Link>
         </div>
     );
 };
