@@ -2,12 +2,14 @@
 const Child = (props) => {
 
     console.log(props);
-    console.log(props.children);
+    // console.log(props.children);
+
+    const parentDataInChild = props.passDataToChild;
 
     return (
         <div>
             <h1>Child Component</h1>
-            <p>Child</p>
+            <p>Parent data in child: {parentDataInChild}</p>
         </div>
     );
 
