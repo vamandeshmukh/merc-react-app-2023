@@ -1,4 +1,5 @@
 import Demo from "./components/Demo";
+import DemoForm from "./components/DemoForm";
 
 const App = () => {
 
@@ -6,7 +7,8 @@ const App = () => {
     <div>
       <h1>Merc React App</h1>
       <p>Mercedes Benz ReactJS Application</p>
-      <Demo />
+      {/* <Demo /> */}
+      <DemoForm />
     </div>
   );
 }

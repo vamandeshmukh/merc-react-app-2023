@@ -13,7 +13,11 @@ const DemoForm = () => {
             <p>Form is used to capture user inputs.</p>
             <div>
                 <form>
-                    <input type={'text'} value='' />
+                    <input type='text' value='' />
+                    <br />
+                    <input type='password' value='' />
+                    <br />
+                    <input type='submit' value='Submit' />
                 </form>
             </div>
             <div>
