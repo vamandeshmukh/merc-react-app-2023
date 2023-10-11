@@ -9,8 +9,8 @@ const App = () => {
     <div>
       <h1>Merc React App</h1>
       <p>Mercedes Benz ReactJS Application</p>
-      {/* <Demo /> */}
-      {/* <DemoForm /> */}
+      <Demo />
+      <DemoForm />
       <Parent />
     </div>
   );
