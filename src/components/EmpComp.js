@@ -13,6 +13,7 @@ const EmpComp = () => {
     useEffect(() => { });
 
     const handleEmployeeId = (evt) => {
+        console.log(evt.target.value);
         setEidToSearch(evt.target.value);
     };
 
