@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
+import EmpList from "./EmpList";
 
 const EmpComp = () => {
 
     const apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
-    // fetch 
-    // axios 
+    // using fetch API from JavaScript 
 
     const [emp, setEmp] = useState({});
-    const [eidToSearch, setEidToSearch] = useState('');
+    const [eidToSearch, setEidToSearch] = useState({});
 
     useEffect(() => { });
 
@@ -18,7 +18,7 @@ const EmpComp = () => {
     };
 
     const findEmployeeById = (evt) => {
-
+        console.log(emp);
         fetch(`${apiUrl}/${eidToSearch}`)
             .then((res) => { return res.json(); })
             .then((resp) => {
@@ -36,49 +36,51 @@ const EmpComp = () => {
             <div>
                 <p>Find Employee by Id</p>
                 <form onSubmit={findEmployeeById}>
-                    <input type="number" name="eidToSearch" value={eidToSearch} onChange={handleEmployeeId} placeholder="Employee id" required />
+                    <input type="number" name="eidToSearch"
+                        value={eidToSearch} onChange={handleEmployeeId}
+                        placeholder="Employee id" required />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
             <div>
                 <p>Employee Data</p>
                 <div>
-                    {emp &&
+                    {emp.id &&
                         <div>
                             <p>Name: {emp.name}</p>
                             <p>Username: {emp.username}</p>
                             <div>
-                                {emp.address &&
-                                    <div>
-                                        <p>Address:</p>
-                                        <p>Street: {emp.address.street}</p>
-                                        <p>Suite: {emp.address.suite}</p>
-                                        <p>City: {emp.address.city}</p>
-                                        <p>Zipcode: {emp.address.zipcode}</p>
-                                        {/* <div>
-                                            {emp.address.geo &&
-                                                <div>
-                                                    <p>Location:</p>
-                                                    <p>Lattitude: {emp.address.geo.lat}</p>
-                                                    <p>Longitude: {emp.address.get.lng}</p>
-                                                </div>
-                                            }
-                                        </div> */}
-                                    </div>
-                                }
+                                <p>Address:</p>
+                                <p>Street: {emp.address.street}</p>
+                                <p>Suite: {emp.address.suite}</p>
+                                <p>City: {emp.address.city}</p>
+                                <p>Zipcode: {emp.address.zipcode}</p>
+                                <div>
+                                    <p>Location:</p>
+                                    <p>Lattitude: {emp.address.geo.lat}</p>
+                                    <p>Longitude: {emp.address.geo.lng}</p>
+                                </div>
                             </div>
                             <p>Email: {emp.phone}</p>
                             <p>Website: {emp.website}</p>
-                            <p>Company:</p>
-                            {/* <p>Name: {emp.company.name}</p> */}
-                            {/* <p>Catchphrase: {emp.company.catchPhrase}</p> */}
-                            {/* <p>BS: {emp.company.bs}</p> */}
+                            <div>
+                                <p>Company:</p>
+                                <p>Name: {emp.company.name}</p>
+                                <p>Catchphrase: {emp.company.catchPhrase}</p>
+                                <p>BS: {emp.company.bs}</p>
+                            </div>
                         </div>
                     }
                 </div>
+                <div>
+                </div>
             </div>
+            <EmpList />
         </div>
     );
 };
 
-export default EmpComp; 
+export default EmpComp;
+
+
+
