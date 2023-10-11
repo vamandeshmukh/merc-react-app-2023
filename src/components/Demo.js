@@ -1,16 +1,21 @@
+
 import { useEffect, useState } from "react";
 
 const Demo = () => {
 
-    const [empData, setEmpData] = useState({
-        eid: 101,
-        firstName: 'Sonu',
-        salary: 100,
-        isMarried: false
-    });
+    const [empData, setEmpData] = useState({});
 
     // useEffect();
     // useEffect(() => {}, []);
+
+    useEffect(() => {
+        setEmpData({
+            eid: 101,
+            firstName: 'Sonu',
+            salary: 100,
+            isMarried: false
+        });
+    }, []);
 
     const increaseSalary = () => {
         setEmpData({
@@ -31,7 +36,7 @@ const Demo = () => {
     const addLastName = () => {
         setEmpData({
             ...empData,
-            firstName: empData.firstName + 'Singh',
+            firstName: empData.firstName + ' Singh',
         });
         console.log(empData.firstName);
     };
@@ -49,6 +54,8 @@ const Demo = () => {
             <button onClick={changeStatus}>Change status</button>
             <br />
             <br />
+            <div>
+            </div>
             <button onClick={addLastName}>addLastName</button>
         </div>
     );
@@ -56,68 +63,68 @@ const Demo = () => {
 
 export default Demo;
 
-// import { useState } from "react";
+// // import { useState } from "react";
 
-// const Demo = () => {
+// // const Demo = () => {
 
-//     const firstName = 'Sonu';
+// //     const firstName = 'Sonu';
 
-//     // create state object in this way
-//     const [salary, setSalary] = useState(100); // number
+// //     // create state object in this way
+// //     const [salary, setSalary] = useState(100); // number
 
-//     const [lastName, updateLastName] = useState(''); // string
-//     const [isMarried, setIsMarried] = useState(false); // boolean
-//     const [address, setAddress] = useState({}); // object
-//     const [phones, setPhones] = useState([]); // array
-//     const [empData, setEmpData] = useState({});
+// //     const [lastName, updateLastName] = useState(''); // string
+// //     const [isMarried, setIsMarried] = useState(false); // boolean
+// //     const [address, setAddress] = useState({}); // object
+// //     const [phones, setPhones] = useState([]); // array
+// //     const [empData, setEmpData] = useState({});
 
-//     const increaseSalary = () => {
-//         setSalary(salary + 1);
-//         console.log(salary);
-//     };
-//     const changeStatus = () => {
-//         setIsMarried(!isMarried);
-//     };
+// //     const increaseSalary = () => {
+// //         setSalary(salary + 1);
+// //         console.log(salary);
+// //     };
+// //     const changeStatus = () => {
+// //         setIsMarried(!isMarried);
+// //     };
 
-//     return (
-//         <div>
-//             <h1>Demo component</h1>
-//             <p>This is demo component.</p>
-//             <p>{firstName}</p>
-//             <p>{salary}</p>
-//             <button onClick={increaseSalary}>Click Here</button>
-//             {/* show salary id isMarried  */}
-//             <br />
-//             <button onClick={changeStatus}>Change Status</button>
-//             <p> {isMarried && salary} </p>
-//         </div>
-//     );
-// };
+// //     return (
+// //         <div>
+// //             <h1>Demo component</h1>
+// //             <p>This is demo component.</p>
+// //             <p>{firstName}</p>
+// //             <p>{salary}</p>
+// //             <button onClick={increaseSalary}>Click Here</button>
+// //             {/* show salary id isMarried  */}
+// //             <br />
+// //             <button onClick={changeStatus}>Change Status</button>
+// //             <p> {isMarried && salary} </p>
+// //         </div>
+// //     );
+// // };
 
-// export default Demo;
+// // export default Demo;
 
 
-// const Demo = () => {
+// // const Demo = () => {
 
-//     const firstName = 'Sonu';
-//     let salary = 100;
+// //     const firstName = 'Sonu';
+// //     let salary = 100;
 
-//     const increaseSalary = () => {
-//         salary++;
-//         console.log(salary);
-//     };
+// //     const increaseSalary = () => {
+// //         salary++;
+// //         console.log(salary);
+// //     };
 
-//     return (
-//         <div>
-//             <h1>Demo component</h1>
-//             <p>This is demo component.</p>
-//             <p>{firstName}</p>
-//             <p>{salary}</p>
-//             <div>
-//                 <button onClick={increaseSalary}>Click Here</button>
-//             </div>
-//         </div>
-//     );
-// };
+// //     return (
+// //         <div>
+// //             <h1>Demo component</h1>
+// //             <p>This is demo component.</p>
+// //             <p>{firstName}</p>
+// //             <p>{salary}</p>
+// //             <div>
+// //                 <button onClick={increaseSalary}>Click Here</button>
+// //             </div>
+// //         </div>
+// //     );
+// // };
 
-// export default Demo;
+// // export default Demo;
