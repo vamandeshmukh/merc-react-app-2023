@@ -8,7 +8,6 @@ const AppRoutes = () => {
 
     return (
         <div>
-            <h1>App Routes</h1>
             <BrowserRouter>
                 <Routes>
                     <Route path="home" element={<Home />} />
