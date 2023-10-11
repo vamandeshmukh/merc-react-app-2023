@@ -33,6 +33,14 @@ root.render(
 // stores / updates all the data of that component 
 // updates JSX if the state updates 
 
+// props - arugments to a component 
+// used to pass data from parent comp to child comp 
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,7 @@
-import Demo from "./components/Demo";
 import DemoForm from "./components/DemoForm";
+import Demo from "./components/Demo";
+
+import Parent from './components/Parent';
 
 const App = () => {
 
@@ -8,7 +10,8 @@ const App = () => {
       <h1>Merc React App</h1>
       <p>Mercedes Benz ReactJS Application</p>
       {/* <Demo /> */}
-      <DemoForm />
+      {/* <DemoForm /> */}
+      <Parent />
     </div>
   );
 }
