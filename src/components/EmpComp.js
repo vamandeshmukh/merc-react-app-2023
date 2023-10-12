@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import EmpList from "./EmpList";
 
 const EmpComp = () => {
 
@@ -23,10 +22,13 @@ const EmpComp = () => {
             .then((res) => { return res.json(); })
             .then((resp) => {
                 console.log(resp);
-                setEmp(resp);
+                setEmp(resp); // directly use response 
                 setEidToSearch('');
             })
-            .catch((err) => { console.log(err); });
+            .catch((err) => {
+                // write proper code  
+                console.log(err); 
+            });
         evt.preventDefault();
     };
 
@@ -80,6 +82,7 @@ const EmpComp = () => {
 };
 
 export default EmpComp;
+
 
 
 

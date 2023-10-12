@@ -1,9 +1,8 @@
 const Footer = () => {
 
     return (
-        <div style={{'background-color': 'black'}}>
+        <div>
             <p>Footer</p>
-            <img height={'50px'} src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Mercedes-Benz_Logo_2010.svg" alt="merc" />
         </div>
     );
 };

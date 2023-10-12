@@ -10,9 +10,12 @@ const EmpList = () => {
         axios.get(apiUrl)
             .then((resp) => {
                 console.log(resp.data);
-                setAllEmpList(resp.data); // imp 
+                setAllEmpList(resp.data); // use response with 'data' 
             })
-            .catch((err) => { console.log(err); })
+            .catch((err) => {
+                // write proper code 
+                console.log(err);
+            })
     }, []);
 
     return (
