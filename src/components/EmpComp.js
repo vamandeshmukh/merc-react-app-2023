@@ -16,15 +16,17 @@ const EmpComp = () => {
     const submitGetEmpById = (evt) => {
         console.log(eidToSearch);
         getEmpById(eidToSearch)
-            .then(resp => resp.json())
             .then((resp) => {
                 console.log(resp);
                 setEmp(resp); // directly use response 
                 setEidToSearch('');
+                setErrMessage('');
             })
             .catch((err) => {
                 console.log(err);
-                setErrMessage(err);
+                setErrMessage(`Employee with the id ${eidToSearch} not found.`);
+                setEidToSearch('');
+                setEmp(new Employee());
             });
         evt.preventDefault();
     };
@@ -42,11 +44,11 @@ const EmpComp = () => {
                 </form>
             </div>
             <div>
-                <p>Employee Data</p>
                 <p>{errMessage}</p>
                 <div>
                     {emp.id &&
                         <div>
+                            <p>Employee Data</p>
                             <p>Name: {emp.name}</p>
                             <p>Username: {emp.username}</p>
                             <div>
@@ -170,6 +172,7 @@ export default EmpComp;
 // };
 
 // export default EmpComp;
+
 
 
 

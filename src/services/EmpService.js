@@ -7,9 +7,13 @@ const getAllEmps = () => {
     return axios.get(empUrl);
 };
 
-const getEmpById = (eid) => {
+const getEmpById = async (eid) => {
     console.log(eid);
-    return fetch(`${empUrl}/${eid}`);
+    const resp = await fetch(`${empUrl}/${eid}`);
+    if (resp.status !== 200)
+        throw await resp.json();
+    else
+        return await resp.json();
 };
 
 export { getAllEmps, getEmpById };
