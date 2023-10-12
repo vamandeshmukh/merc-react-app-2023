@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { getEmpById } from '../services/EmpService';
-import Employee from "../models/Employee";
+import { getEmpById } from '../../services/EmpService';
+import Employee from "../../models/Employee";
 
 const EmpComp = () => {
 

@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Demo from "./components/Demo";
-import Home from "./components/Home";
-import Page404 from "./components/Page404";
-import Parent from "./components/Parent";
-import Toolbar from "./components/Toolbar";
-import Footer from './components/Footer';
-import EmpComp from "./components/EmpComp";
-import EmpList from "./components/EmpList";
+import Demo from "./components/demo/Demo";
+import Home from "./components/common/Home";
+import Page404 from "./components/common/Page404";
+import Parent from "./components/demo/Parent";
+import Toolbar from "./components/common/Toolbar";
+import Footer from './components/common/Footer';
+import EmpComp from "./components/emp/EmpComp";
+import EmpList from "./components/emp/EmpList";
 const AppRoutes = () => {
 
     return (

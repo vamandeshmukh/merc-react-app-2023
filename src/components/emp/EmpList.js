@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllEmps } from "../services/EmpService";
+import { getAllEmps } from "../../services/EmpService";
 
 const EmpList = () => {
 

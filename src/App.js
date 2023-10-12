@@ -1,9 +1,10 @@
 import AppRoutes from "./AppRoutes";
+import './App.css';
 
 const App = () => {
 
   return (
-    <div>
+    <div className="dark-mode">
       <AppRoutes />
     </div>
   );
