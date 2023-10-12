@@ -1,13 +1,12 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { getAllEmps } from "../services/EmpService";
 
 const EmpList = () => {
 
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
     const [allEmpList, setAllEmpList] = useState([]);
-
+    
     useEffect(() => {
-        axios.get(apiUrl)
+        getAllEmps()
             .then((resp) => {
                 console.log(resp.data);
                 setAllEmpList(resp.data); // use response with 'data' 
