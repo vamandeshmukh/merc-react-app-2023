@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const empUrl = 'https://jsonplaceholder.typicode.com/userss';
+const empUrl = 'https://jsonplaceholder.typicode.com/users';
 
 const getAllEmps = () => {
     console.log('getAllEmps');
