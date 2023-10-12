@@ -1,27 +1,45 @@
-import { useEffect, useState } from "react";
-import AppUser from "../../models/AppUser";
+import { useState } from "react";
+import UpdateProfile from './UpdateProfile';
 
 const UserProfile = () => {
 
-    const [profile, setProfile] = useState(new AppUser());
+    const [profile, setProfile] = useState(JSON.parse(localStorage.getItem('currentUser')));
+    const [isEditing, setIsEditing] = useState(false);
 
-    useEffect(() => {
-        console.log(profile);
-        setProfile(new AppUser());
-    }, [profile]);
-
+    const shouldEdit = () => {
+        setIsEditing(!isEditing);
+    };
 
     return (
         <div>
-            <h2>User Profile</h2>
-            <p>Name: {profile.name}</p>
-            <p>Username: {profile.username}</p>
-            <p>phone: {profile.phone}</p>
-            <p>Email: {profile.email}</p>
-            <p>Password: {profile.password}</p>
-            <p>Avatar:</p>
-            <img src={user.avatar} alt="Avatar" />
-            <p>Edit Profile</p>
+            <p>Profile</p>
+            <div>
+                {
+                    (!isEditing && profile) &&
+                    <div>
+                        <h1>User Profile</h1>
+                        <p>Name: {profile.name}</p>
+                        <p>Username: {profile.username}</p>
+                        <p>phone: {profile.phone}</p>
+                        <p>Email: {profile.email}</p>
+                        <p>Password: {profile.password}</p>
+                        <p>Avatar:</p>
+                        <img src={profile.avatar} alt="Avatar" />
+                        <p></p>
+                        <button onClick={shouldEdit} >Edit Profile</button>
+                    </div>
+                }
+            </div>
+            <div>
+                {
+                    isEditing &&
+                    <div>
+                        <UpdateProfile profileToUpdate={profile} ></UpdateProfile>
+                        <p></p>
+                        <button onClick={shouldEdit} >Cancel</button>
+                    </div>
+                }
+            </div>
         </div>
     );
 }
