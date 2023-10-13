@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const Comp2Slice = createSlice({
     name: 'cmp2Data',
     initialState: {
-        cmp2State: 'Comp2 Initial state'
+        cmp2State: 'Comp1 Initial state'
     },
     reducers: {
         setCmp2State: (state, action) => {
