@@ -11,8 +11,8 @@ const Comp1 = () => {
     const temp = 'Comp1 updated state';
     const dispatch = useDispatch();
 
-    // send data to store 
     const sendDataToStore = () => {
+        // send data to store 
         dispatch(setCmp1State(temp));
     };
 
