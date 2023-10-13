@@ -1,67 +1,84 @@
 
-import { useEffect, useState } from "react";
-
+import Comp1 from "./Comp1";
+import Comp2 from "./Comp2";
 const Demo = () => {
-
-    const [empData, setEmpData] = useState({});
-
-    // useEffect();
-    // useEffect(() => {}, []);
-
-    useEffect(() => {
-        setEmpData({
-            eid: 101,
-            firstName: 'Sonu',
-            salary: 100,
-            isMarried: false
-        });
-    }, []);
-
-    const increaseSalary = () => {
-        setEmpData({
-            ...empData,
-            salary: empData.salary + 1,
-        });
-        console.log(empData.salary);
-    };
-
-    const changeStatus = () => {
-        setEmpData({
-            ...empData,
-            isMarried: !empData.isMarried,
-        });
-        console.log(empData.isMarried);
-    };
-
-    const addLastName = () => {
-        setEmpData({
-            ...empData,
-            firstName: empData.firstName + ' Singh',
-        });
-        console.log(empData.firstName);
-    };
 
     return (
         <div>
-            <h1>Demo component</h1>
-            <p>This is demo component.</p>
-            <p>{empData.firstName}</p>
-            <p>{empData.salary}</p>
-            <p> {empData.isMarried ? 'Married' : 'Single'} </p>
-            <button onClick={increaseSalary}>Add salary</button>
-            <br />
-            <br />
-            <button onClick={changeStatus}>Change status</button>
-            <br />
-            <br />
-            <div>
-            </div>
-            <button onClick={addLastName}>addLastName</button>
+            <p>Demo Cpmponent</p>
+            <Comp1 />
+            <Comp2 />
         </div>
     );
 };
 
 export default Demo;
+
+
+
+// import { useEffect, useState } from "react";
+
+// const Demo = () => {
+
+//     const [empData, setEmpData] = useState({});
+
+//     // useEffect();
+//     // useEffect(() => {}, []);
+
+//     useEffect(() => {
+//         setEmpData({
+//             eid: 101,
+//             firstName: 'Sonu',
+//             salary: 100,
+//             isMarried: false
+//         });
+//     }, []);
+
+//     const increaseSalary = () => {
+//         setEmpData({
+//             ...empData,
+//             salary: empData.salary + 1,
+//         });
+//         console.log(empData.salary);
+//     };
+
+//     const changeStatus = () => {
+//         setEmpData({
+//             ...empData,
+//             isMarried: !empData.isMarried,
+//         });
+//         console.log(empData.isMarried);
+//     };
+
+//     const addLastName = () => {
+//         setEmpData({
+//             ...empData,
+//             firstName: empData.firstName + ' Singh',
+//         });
+//         console.log(empData.firstName);
+//     };
+
+//     return (
+//         <div>
+//             <h1>Demo component</h1>
+//             <p>This is demo component.</p>
+//             <p>{empData.firstName}</p>
+//             <p>{empData.salary}</p>
+//             <p> {empData.isMarried ? 'Married' : 'Single'} </p>
+//             <button onClick={increaseSalary}>Add salary</button>
+//             <br />
+//             <br />
+//             <button onClick={changeStatus}>Change status</button>
+//             <br />
+//             <br />
+//             <div>
+//             </div>
+//             <button onClick={addLastName}>addLastName</button>
+//         </div>
+//     );
+// };
+
+// export default Demo;
 
 // // import { useState } from "react";
 
