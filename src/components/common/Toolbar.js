@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const Toolbar = () => {
 
-
     return (
         <div>
             <Link to="home">Home</Link>

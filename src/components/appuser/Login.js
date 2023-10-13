@@ -22,18 +22,20 @@ const Login = () => {
         login(loginData)
             .then((resp) => {
                 if (resp.data[0].username === loginData.username) {
-                    localStorage.setItem('currentUser', JSON.stringify(resp.data[0]));
+                    localStorage.setItem('loggedIn', true);
+                    localStorage.setItem('currentProfile', JSON.stringify(resp.data[0]));
                     setLoginData('');
                     setFailedLogin('');
-                    alert(`Hi ${JSON.parse(localStorage.getItem('currentUser')).username}! You've logged in successfully. Redirecting you to home...`);
+                    alert(`Hi ${JSON.parse(localStorage.getItem('currentProfile')).username}! You've logged in successfully. Redirecting you to home...`);
                     navigate('/home');
                 }
             })
             .catch((err) => {
                 console.log(err);
-                setLoginData({ username: '', password: '' });
+                setLoginData('');
                 setFailedLogin('Invalid credentials!');
-                localStorage.removeItem('currentUser');
+                localStorage.setItem('loggedIn', false);
+                localStorage.removeItem('currentProfile');
             });
         evt.preventDefault();
     };

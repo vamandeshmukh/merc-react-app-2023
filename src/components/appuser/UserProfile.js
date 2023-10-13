@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UpdateProfile from './UpdateProfile';
+import { updateUser } from "../../services/UserService";
 
 const UserProfile = () => {
 
-    const [profile, setProfile] = useState(JSON.parse(localStorage.getItem('currentUser')));
+    const [profile, setProfile] = useState(JSON.parse(localStorage.getItem('currentProfile')));
     const [isEditing, setIsEditing] = useState(false);
 
     const shouldEdit = () => {
         setIsEditing(!isEditing);
+    };
+
+    const updateProfile = (profileData) => {
+        console.log(profileData);
+        updateUser(profileData)
+            .then((resp) => {
+                console.log(resp.data);
+                setProfile(profileData);
+                shouldEdit();
+            })
+            .catch((err) => { console.log(err) });
     };
 
     return (
@@ -18,13 +30,14 @@ const UserProfile = () => {
                     (!isEditing && profile) &&
                     <div>
                         <h1>User Profile</h1>
+                        <img height={'200'} width={'200'} src={'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'} alt="Avatar" />
                         <p>Name: {profile.name}</p>
                         <p>Username: {profile.username}</p>
-                        <p>phone: {profile.phone}</p>
                         <p>Email: {profile.email}</p>
-                        <p>Password: {profile.password}</p>
-                        <p>Avatar:</p>
-                        <img src={profile.avatar} alt="Avatar" />
+                        <p>Phone: {profile.phone}</p>
+                        <p>Website: {profile.website}</p>
+                        {/* <p>Password: {'\u2022'.repeat((profile.password).length)}</p> */}
+                        <p>Password:</p>
                         <p></p>
                         <button onClick={shouldEdit} >Edit Profile</button>
                     </div>
@@ -34,7 +47,7 @@ const UserProfile = () => {
                 {
                     isEditing &&
                     <div>
-                        <UpdateProfile profileToUpdate={profile} ></UpdateProfile>
+                        <UpdateProfile updatePro={updateProfile} ></UpdateProfile>
                         <p></p>
                         <button onClick={shouldEdit} >Cancel</button>
                     </div>

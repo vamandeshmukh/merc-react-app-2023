@@ -14,7 +14,7 @@ const login = (appUser) => {
 
 const updateUser = (appUser) => {
     console.log(appUser);
-    return axios.put(userUrl, appUser);
+    return axios.post(userUrl, appUser);
 };
 
 const logout = () => {

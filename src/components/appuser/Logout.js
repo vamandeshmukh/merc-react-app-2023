@@ -5,9 +5,17 @@ const Logout = () => {
     const navigate = useNavigate();
 
     const logoutFromHere = () => {
-        localStorage.removeItem('currentUser');
-        alert('You have successfully logged out. Redirecting you to home...');
-        navigate('/home');
+        const confirmation = window.confirm('Are you sure to logout?');
+        if (confirmation) {
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('currentProfile');
+            localStorage.clear();
+            alert('You have successfully logged out. Redirecting you to home...');
+            navigate('/home');
+        }
+        else {
+            navigate('/logout');
+        }
     };
 
     return (
