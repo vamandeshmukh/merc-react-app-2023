@@ -2,13 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import UserReducer from './UserSlice';
 import Comp1Reducer from './Comp1Slice';
 import Comp2Reducer from './Comp2Slice';
-
-// const store = {};
-// const store = configureStore();
-// const store = configureStore({});
-// const store = configureStore({
-//     reducer: {}
-// });
+import thunk from 'redux-thunk';
 
 const store = configureStore({
     reducer: {
@@ -16,10 +10,35 @@ const store = configureStore({
         cmp1Data: Comp1Reducer,
         cmp2Data: Comp2Reducer
         // , more reducers 
-    }
+    },
+    middleware: [...getDefaultMiddleware(), thunk]
 });
 
 export default store;
+
+
+// import { configureStore } from "@reduxjs/toolkit";
+// import UserReducer from './UserSlice';
+// import Comp1Reducer from './Comp1Slice';
+// import Comp2Reducer from './Comp2Slice';
+
+// // const store = {};
+// // const store = configureStore();
+// // const store = configureStore({});
+// // const store = configureStore({
+// //     reducer: {}
+// // });
+
+// const store = configureStore({
+//     reducer: {
+//         userData: UserReducer,
+//         cmp1Data: Comp1Reducer,
+//         cmp2Data: Comp2Reducer
+//         // , more reducers
+//     }
+// });
+
+// export default store;
 
 
 // 0. Install redux libraries
