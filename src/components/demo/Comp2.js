@@ -4,12 +4,14 @@ const Comp2 = () => {
 
     const cmp1 = useSelector(store => store.cmp1Data.cmp1State);
     const cmp2 = useSelector(store => store.cmp2Data.cmp2State);
+    const userD = useSelector(store => store.userData.userState);
 
     return (
         <div>
-            <h1>Comp1</h1>
+            <h1>Comp2</h1>
             <p>Comp1 data: {cmp1}</p>
             <p>Comp2 data: {cmp2}</p>
+            <p>User data: {userD.username}</p>
         </div>
     );
 
