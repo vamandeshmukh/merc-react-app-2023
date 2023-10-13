@@ -23,7 +23,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const UserSlice = createSlice({
     name: 'userData',
     initialState: {
-        userState: {}
+        userState: { username: 'Sonu', password: 'Sonu' }
     },
     reducers: {
         setUserState: (state, action) => {

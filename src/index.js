@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import App from './App';
+import store from './redux/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('abc'));
 
 root.render(
-    <App />
+    <Provider store={store} >
+        <App />
+    </Provider>
 );
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from './App';
+
+// const root = ReactDOM.createRoot(document.getElementById('abc'));
+
+// root.render(
+//     <App />
+// );
 
 
 // ReactJS 

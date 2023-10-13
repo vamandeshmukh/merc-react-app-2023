@@ -9,7 +9,8 @@ import UserReducer from './UserSlice';
 
 const store = configureStore({
     reducer: {
-        userState: UserReducer
+        userData: UserReducer
+        // , more reducers 
     }
 });
 
