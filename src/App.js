@@ -1,11 +1,12 @@
 import { MyContextProvider } from "./context/MyContext";
 import Home from "./components/common/Home";
+import AppRoutes from "./AppRoutes";
 
 const App = () => {
 
   return (
     <MyContextProvider>
-      <Home />
+      <AppRoutes />
     </MyContextProvider>
   );
 }
