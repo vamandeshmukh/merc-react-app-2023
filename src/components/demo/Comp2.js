@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 const Comp2 = () => {
 
     const cmp1 = useSelector(store => store.cmp1Data.cmp1State);
-    const cmp2 = useSelector(store => store.cmp2Data.cmp1State);
+    const cmp2 = useSelector(store => store.cmp2Data.cmp2State);
 
     return (
         <div>

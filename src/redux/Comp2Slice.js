@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const Comp2Slice = createSlice({
-    name: cmp2Data,
+    name: 'cmp2Data',
     initialState: {
         cmp2State: 'Comp2 Initial state'
     },
