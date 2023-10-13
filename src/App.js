@@ -1,16 +1,32 @@
-import AppRoutes from "./AppRoutes";
-import './App.css';
+import { MyContextProvider } from "./context/MyContext";
+import Home from "./components/common/Home";
 
 const App = () => {
 
   return (
-    <div className="dark-mode">
-      <AppRoutes />
-    </div>
+    <MyContextProvider>
+      <Home />
+    </MyContextProvider>
   );
 }
 
 export default App;
+
+
+// import AppRoutes from "./AppRoutes";
+// import './App.css';
+
+// const App = () => {
+
+//   return (
+//     <div className="dark-mode">
+//       <AppRoutes />
+//     </div>
+//   );
+// }
+
+// export default App;
+
 // import DemoForm from "./components/DemoForm";
 // import Demo from "./components/Demo";
 

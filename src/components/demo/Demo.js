@@ -5,7 +5,7 @@ const Demo = () => {
 
     return (
         <div>
-            <p>Demo Cpmponent</p>
+            <p>Demo Component</p>
             <Comp1 />
             <Comp2 />
         </div>
