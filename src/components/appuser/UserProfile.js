@@ -36,8 +36,8 @@ const UserProfile = () => {
                         <p>Email: {profile.email}</p>
                         <p>Phone: {profile.phone}</p>
                         <p>Website: {profile.website}</p>
-                        <p>Password: {'\u2022'.repeat((profile.password).length)}</p>
-                        {/* <p>Password:</p> */}
+                        {/* <p>Password: {'\u2022'.repeat((profile.password).length)}</p> */}
+                        <p>Password:</p>
                         <p></p>
                         <button onClick={shouldEdit} >Edit Profile</button>
                     </div>
