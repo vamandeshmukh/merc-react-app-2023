@@ -1,5 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import UserReducer from './UserSlice';
+import Comp1Reducer from './Comp1Slice';
+import Comp2Reducer from './Comp2Slice';
+
 // const store = {};
 // const store = configureStore();
 // const store = configureStore({});
@@ -9,7 +12,9 @@ import UserReducer from './UserSlice';
 
 const store = configureStore({
     reducer: {
-        userData: UserReducer
+        userData: UserReducer,
+        cmp1Data: Comp1Reducer,
+        cmp2Data: Comp2Reducer
         // , more reducers 
     }
 });
