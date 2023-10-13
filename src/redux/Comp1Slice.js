@@ -5,7 +5,8 @@ const Comp1Slice = createSlice({
     name: 'cmp1Data',
 
     initialState: {
-        cmp1State: 'Comp1 initial state'
+        cmp1State: 'Comp1 initial state',
+        cmp1State2: 'Some more data'
     },
 
     reducers: {

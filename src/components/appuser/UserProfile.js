@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import UpdateProfile from './UpdateProfile';
 import { updateUser } from "../../services/UserService";
+import { useDispatch } from "react-redux";
+import { setUserState } from "../../redux/UserSlice";
 
 const UserProfile = () => {
+
+    const dispatch = useDispatch();
 
     const [profile, setProfile] = useState(JSON.parse(localStorage.getItem('currentProfile')));
     const [isEditing, setIsEditing] = useState(false);
@@ -16,6 +20,7 @@ const UserProfile = () => {
         updateUser(profileData)
             .then((resp) => {
                 console.log(resp.data);
+                dispatch(setUserState(profileData));
                 setProfile(profileData);
                 shouldEdit();
             })
